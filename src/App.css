@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* App.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom Styles */
+body {
+  background: linear-gradient(135deg, #a87de3, #00bfa5); /* Purple to Teal Gradient */
+  color: #fff;
+}
+
+.container {
+  animation: fadeIn 1s;
+}
+
+.grid {
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid:hover {
+  transform: scale(1.02);
+}
+
+.border {
+  border-width: 2px;
+  border-color: #00e5ff; /* Neon Blue */
+}
+
+button {
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff00a5; /* Neon Pink */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
