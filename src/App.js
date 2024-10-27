@@ -1,37 +1,4 @@
 
-// import React, { useState } from 'react';
-// import ProductList from './components/ProductList';
-// import Cart from './components/Cart';
-// import './App.css'; // Don't forget to import your Tailwind CSS styles
-
-// function App() {
-//   const [cartItems, setCartItems] = useState([]);
-
-//   const addToCart = (product) => {
-//     setCartItems([...cartItems, product]);
-//   };
-
-//   const removeFromCart = (productId) => {
-//     const updatedCart = cartItems.filter((item) => item.id !== productId);
-//     setCartItems(updatedCart);
-//   };
-
-//   return (
-//     <div className="container mx-auto p-4">
-//       <h1 className="text-3xl font-bold mb-4">E-commerce Store</h1>
-
-//       <div className="grid grid-cols sm:grid-cols-3 gap-4 p-2 ">
-//         {/* Display list of products */}
-//         <ProductList addToCart={addToCart} />
-
-//         {/* Display the cart */}
-//         <Cart cartItems={cartItems} onRemove={removeFromCart} />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 
 // App.js
@@ -40,6 +7,7 @@ import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 
 import './App.css'; // Don't forget to import your Tailwind CSS styles
+import Footer from './components/Footer';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -76,9 +44,11 @@ function App() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">E-commerce Store</h1>
+       <header className="bg-blue-700 p-6 text-white shadow-md w-full">
+         <h1 className="text-4xl font-bold text-center">Fashion & Electronics Hub</h1>
+       </header>
 
-      <div className="grid lg:grid-cols-2  gap-4 p-2 ">
+      <div className="grid lg:grid-cols-2 mt-12  gap-4 p-2 ">
        
 
         {/* Display the cart */}
@@ -87,6 +57,8 @@ function App() {
         {/* Display list of products */}
         <ProductList addToCart={addToCart} />
       </div>
+      <Footer/>
+
     </div>
   );
 }
